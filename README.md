@@ -1,3 +1,3 @@
-# GitHub Invitation
+# GitHub Organisation Invitation
 
-A web app that can accept a github user name and send them an invitation to join a github organisation.
+A web app that can accept a GitHub username and send them an invitation to join a GitHub Organisation.
