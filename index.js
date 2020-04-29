@@ -7,7 +7,11 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.post('/', (req, res) => {
-  res.status(201).json(req.body);
+  res.status(201).json({
+    status: true,
+    message: 'Successfully Invited',
+    body: 'Check your inbox and accept the invitation. Thank you!'
+  });
 });
 
 app.get('/', (req, res) => {

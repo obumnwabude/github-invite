@@ -1,19 +1,23 @@
-// get the form
+// get the DOM objects
 const inviteForm = document.querySelector('#invite');
-
-// get the submit button
+const inputUsername = document.querySelector("input[type='text']");
 const submitButton = document.querySelector("button[type='submit']");
+const messageContainer = document.querySelector('#message-container');
+const messageHeading = document.querySelector('#message-heading');
+const messageBody = document.querySelector('#message-body');
 
-/** 
- * Changes the state of the submit button
- */
-const switchButton = () => submitButton.disabled ? submitButton.disabled = false :
-  submitButton.disabled = true;
+// ensures that the messageContainer when a username is being entered
+inputUsername.addEventListener('focus', () => {
+  if (!(messageContainer.classList.contains('hide'))) messageContainer.classList.add('hide');
+  if (submitButton.disabled) submitButton.disabled = false;
+});
 
 // capture submit events and send
 inviteForm.addEventListener('submit', e => {
   e.preventDefault();
-  switchButton();
+  // make the click button unavailable
+  submitButton.disabled = true;
+  // send username and handle accordingly
   fetch('/', { 
     method: 'POST', 
     headers: {
@@ -22,24 +26,44 @@ inviteForm.addEventListener('submit', e => {
     },
     body: JSON.stringify(Object.fromEntries(new FormData(inviteForm)))})
     .then(response => response.json())
-    .then(data => success(data))
-    .catch(error => failure(error));
+    .then(data => displayMessage(data))
+    .catch(error => displayMessage({
+      status: false,
+      message: 'An Error Occured',
+      body: error
+    }));
 });
 
-/**
- * Handles successful submission of username
- * @param {string} response - The response from successful submission
+/** 
+ * Adds the response message to the DOM
+ * @param {Object} data - the data from which the message to be added to the DOM is configured
  */
-const success = data => {
-  switchButton();
-  console.log(data);
+const displayMessage = (data) => {
+  // if invitation was successfully sent
+  if (data.status) {
+    // set the color of header
+    messageHeading.classList.remove('failure');
+    messageHeading.classList.add('success');
+    // update the DOM
+    addToDom(data);
+  } else {
+  // else if invitation was not successfully sent
+    // set the color of header
+    messageHeading.classList.remove('success');
+    messageHeading.classList.add('failure');
+    // update the DOM
+    addToDom(data);
+  }
+  // make the click button available
+  submitButton.disabled = false;
 };
 
 /** 
- * Handles error submission of username
- * @param {error} error - The error that occured upon submission
+ * Adds the provided message and body to the DOM and expose them
+ * @param {Object} data - the data to be added to the DOM
  */
-const failure = error => {
-  switchButton();
-  console.log(error);
+const addToDom = data => {
+  messageHeading.textContent = data.message;
+  messageBody.textContent = data.body;
+  messageContainer.classList.remove('hide');
 };

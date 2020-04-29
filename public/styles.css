@@ -1,7 +1,10 @@
 /* normalise */
-html, body {
+html, body, div, main, p, h1, h3 {
   margin: 0;
   padding: 0;
+}
+
+html {
   font-size: 16px;
 }
 
@@ -9,6 +12,10 @@ body {
   background-color: #f9fcff;
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 main {
@@ -24,7 +31,6 @@ main {
 
 h1 {
   margin: 0;
-  text-align: center;
   font-weight: 700;
   text-decoration: underline;
   text-decoration-style: double;
@@ -35,9 +41,8 @@ h1 {
   display: none;
 }
 
-p {
+p#intro {
   margin: 20px auto;
-  text-align: center;
 }
 
 form {
@@ -66,7 +71,7 @@ input[type="text"]:focus {
   flex-direction: row-reverse;
 }
 
-button {
+button[type="submit"] {
   min-width: 75px;
   padding: 10px;
   border: none;
@@ -77,16 +82,40 @@ button {
   font-family: 'Roboto', sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
+  margin: 20px;
 } 
 
-button[type="submit"] {
-  margin: 20px;
-  text-align: right;
-}
-
-button:disabled {
+button[type="submit"]:disabled {
   background-color: rgba(0, 0, 0, 0.7);
 }
+
+#message-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hide {
+  display: none;
+}
+
+#message-heading {
+  margin: 0 auto 15px auto;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.success {
+  background-color: rgb(156, 226, 182);
+  color: rgb(18, 109, 52);
+}
+
+.failure {
+  background-color: rgb(252, 148, 148);
+  color: rgb(142, 40, 40);}
 
 @media (min-width: 992px) {
   main {
