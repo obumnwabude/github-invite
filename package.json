@@ -1,0 +1,34 @@
+{
+  "name": "invite-to-github-org",
+  "version": "1.0.0",
+  "description": "A web app that can accept a github user name and send them an invitation to join a github organisation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obumnwabude/invite-to-github-org.git"
+  },
+  "keywords": [
+    "invite",
+    "invitation",
+    "github",
+    "organisations",
+    "orgs"
+  ],
+  "author": "Obumuneme Nwabude",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/obumnwabude/invite-to-github-org/issues"
+  },
+  "homepage": "https://github.com/obumnwabude/invite-to-github-org#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
