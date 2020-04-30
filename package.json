@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/obumnwabude/invite-to-github-org#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
