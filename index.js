@@ -26,6 +26,10 @@ app.get('/', (req, res) => {
   res.status(200).sendFile('index.html');
 });
 
+app.get('/org', (req, res) => {
+  res.status(200).send(org.name || '');
+});
+
 app.post('/', async (req, res) => {
   try {
     // check if github account exists with the given username, if no return that the username is invalid

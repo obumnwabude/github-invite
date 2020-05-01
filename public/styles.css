@@ -37,8 +37,10 @@ h1 {
   font-size: 2rem;
 }
 
-.show-at-large {
-  display: none;
+.org-name {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-style: double;
 }
 
 p#intro {
@@ -56,6 +58,7 @@ input[type="text"] {
   margin-top: 5px;
   display: block;
   min-width: 240px;
+  font-size: 1.2rem;
 }
 
 input[type="text"]:focus {
