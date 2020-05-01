@@ -63,7 +63,7 @@ const displayMessage = (data) => {
  * @param {Object} data - the data to be added to the DOM
  */
 const addToDom = data => {
-  messageHeading.textContent = data.message;
-  messageBody.textContent = data.body;
+  messageHeading.innerHTML = data.message;
+  messageBody.innerHTML = data.body;
   messageContainer.classList.remove('hide');
 };
