@@ -5,18 +5,6 @@ const submitButton = document.querySelector("button[type='submit']");
 const messageContainer = document.querySelector('#message-container');
 const messageHeading = document.querySelector('#message-heading');
 const messageBody = document.querySelector('#message-body');
-const org = document.querySelector('.org');
-
-// get organisation's name 
-fetch('/org')
-  .then(response => response.text())
-  .then(name => {
-    if (name !== '') {
-      console.log(name);
-      org.innerHTML = '@' + name;
-      org.classList.add('org-name');
-    }
-  }).catch(error => console.log(error));
 
 // ensures that the messageContainer when a username is being entered
 inputUsername.addEventListener('focus', () => {
