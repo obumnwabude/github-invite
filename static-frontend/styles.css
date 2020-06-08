@@ -37,18 +37,12 @@ h1 {
   font-size: 2rem;
 }
 
-.org-name {
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-style: double;
-}
-
 p#intro {
   margin: 20px auto;
 }
 
 form {
-  max-width: 300px;
+  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -57,8 +51,13 @@ input[type="text"] {
   border-bottom: 1.5px solid grey;
   margin-top: 5px;
   display: block;
-  min-width: 240px;
+  min-width: 250px;
   font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+input[name="username"] {
+  margin-bottom: 0px;
 }
 
 input[type="text"]:focus {
@@ -67,7 +66,7 @@ input[type="text"]:focus {
   outline: none;
 }
 
-#form-container {
+#button-container {
   padding: 0;
   margin: 0;
   display: flex;
@@ -129,10 +128,6 @@ button[type="submit"]:disabled {
 
   h1 {
     font-size: 2.5rem;
-  }
-
-  .show-at-large {
-    display: inline;
   }
 
   input[type="text"] {

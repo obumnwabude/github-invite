@@ -10,14 +10,22 @@
 <body>
   <main>
     <h1 class="text-center">Github Organisation Invitation</h1>
-    <p class="text-center" id="intro">Enter the Github username of the Github user you want to invite to your organisation.</p>
+    <p class="text-center" id="intro">Enter the name of the Github organisation to which the Github user is to be invited to, the OAuth Access token of an admin in that organisation on whose behalf the invitation is done, and the username of the Github user to be invited.</p>
     <form method="POST" id="invite">
       <label>
-        Username:
-        <input type="text" name="username" minlength="2" placeholder="Kindly enter your github username" required>
+        Github Organisation's Name
+        <input type="text" name="org" minlength="2" placeholder="Github Organisation's Name" required>
       </label>
-      <div id="form-container"> 
-        <button type="submit">Get Invited</button>
+      <label>
+        Admin's Access token
+        <input type="text" name="token" minlength="16" placeholder="Admin's Access token">
+      </label>
+      <label>
+        Github Invitee's Username
+        <input type="text" name="username" minlength="2" placeholder="Github Invitee's Username" required>
+      </label>
+      <div id="button-container"> 
+        <button type="submit">Invite User</button>
       </div>
     </form>
     <div id="message-container" class="hide">
