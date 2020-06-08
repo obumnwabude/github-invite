@@ -92,7 +92,7 @@ button[type="submit"]:disabled {
 }
 
 #message-container {
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 18px;
@@ -128,6 +128,11 @@ button[type="submit"]:disabled {
 
   h1 {
     font-size: 2.5rem;
+  }
+
+  #form-and-message-container {
+    display: flex;
+    justify-content: space-between;
   }
 
   input[type="text"] {
