@@ -1,5 +1,5 @@
 /* normalise */
-html, body, div, main, p, h1, h3 {
+html, body, div, main, p, h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
@@ -16,6 +16,10 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+#noscript-heading {
+  font-size: 1.2rem;
 }
 
 main {
