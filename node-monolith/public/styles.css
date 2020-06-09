@@ -56,6 +56,20 @@ form {
   margin: 0 auto;
 }
 
+label {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+label input[type="text"]:placeholder-shown + span {
+  display: none;
+}
+
+label input[type="text"]:not(:placeholder-shown):focus + span {
+  display: block;
+  color: #0000FF;
+}
+
 input[type="text"] {
   border: none;
   border-bottom: 1.5px solid grey;
@@ -63,6 +77,11 @@ input[type="text"] {
   display: block;
   min-width: 240px;
   font-size: 1.2rem;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
 }
 
 input[type="text"]:focus {

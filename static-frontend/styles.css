@@ -50,6 +50,24 @@ form {
   margin: 0 auto;
 }
 
+label {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+label span {
+  font-size: 1rem;
+}
+
+label input[type="text"]:placeholder-shown + span {
+  display: none;
+}
+
+label input[type="text"]:not(:placeholder-shown):focus + span {
+  display: block;
+  color: #0000FF;
+}
+
 input[type="text"] {
   border: none;
   border-bottom: 1.5px solid grey;
@@ -58,6 +76,11 @@ input[type="text"] {
   min-width: 250px;
   font-size: 1.2rem;
   margin-bottom: 30px;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
 }
 
 input[name="username"] {
