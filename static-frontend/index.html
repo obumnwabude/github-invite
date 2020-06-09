@@ -5,28 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Get Invited to the GitHub Organisation</title>
+  <title>Invite a GitHub user to your GitHub Organization</title>
 </head>
 <body>
   <noscript>
     <h2 id="noscript-heading" class="failure">This website requires JavaScript to successfully send invitations. For invitations to be sent, enable JavaScript in your browser settings or upgrade or change your browser.</h2>
   </noscript>
   <main>
-    <h1 class="text-center">Github Organisation Invitation</h1>
-    <p class="text-center" id="intro">Enter the name of the Github organisation to which the Github user is to be invited to, the OAuth Access token of an admin in that organisation on whose behalf the invitation is done, and the username of the Github user to be invited.</p>
+    <h1 class="text-center">GitHub Organization Invitation</h1>
+    <p class="text-center" id="intro">Enter the name of the GitHub organization to which the Github user is to be invited to, the OAuth Access token of an admin in that organization on whose behalf the invitation is done, and the username of the GitHub user to be invited.</p>
     <div id="form-and-message-container">
       <form method="POST" id="invite">
         <label>
-          <input type="text" id="org" name="org" minlength="2" placeholder="Github Organisation's Name" required>
-          <span>Github Organisation's Name</span>
+          <input type="text" id="org" name="org" minlength="2" placeholder="GitHub Organization's Name" required>
+          <span>GitHub Organization's Name</span>
         </label>
         <label>
           <input type="text" id="token" name="token" minlength="32" placeholder="Admin's Access token">
           <span>Admin's Access token</span>
         </label>
         <label>
-          <input type="text" id="username" name="username" minlength="2" placeholder="Github Invitee's Username" required>
-          <span>Github Invitee's Username</span>
+          <input type="text" id="username" name="username" minlength="2" placeholder="GitHub Invitee's Username" required>
+          <span>GitHub Invitee's Username</span>
         </label>
         <div id="button-container"> 
           <button type="submit">Invite User</button>
