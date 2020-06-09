@@ -1,37 +1,27 @@
 // get the DOM objects
 const inviteForm = document.querySelector('#invite');
-const inputUsername = document.querySelector("input[type='text']");
-const submitButton = document.querySelector("button[type='submit']");
+const inputOrg = document.querySelector('input[name="org"]');
+const inputToken = document.querySelector('input[name="token"]');
+const inputUsername = document.querySelector('input[name="username"]');
+const submitButton = document.querySelector('button[type="submit"]');
 const messageContainer = document.querySelector('#message-container');
 const messageHeading = document.querySelector('#message-heading');
 const messageBody = document.querySelector('#message-body');
 
-// ensures that the messageContainer when a username is being entered
+// ensures that the messageContainer is hidden when a username is being entered
 inputUsername.addEventListener('focus', () => {
   if (!(messageContainer.classList.contains('hide'))) messageContainer.classList.add('hide');
   if (submitButton.disabled) submitButton.disabled = false;
 });
 
 // capture submit events and send
-inviteForm.addEventListener('submit', e => {
+inviteForm.addEventListener('submit', async e => {
   e.preventDefault();
-  // make the click button unavailable
   submitButton.disabled = true;
-  // send username and handle accordingly
-  fetch('/', { 
-    method: 'POST', 
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept':'application/json'
-    },
-    body: JSON.stringify(Object.fromEntries(new FormData(inviteForm)))})
-    .then(response => response.json())
-    .then(data => displayMessage(data))
-    .catch(error => displayMessage({
-      status: false,
-      message: 'An Error Occured',
-      body: error
-    }));
+  // make invitation
+  const data = await invite(Object.fromEntries(new FormData(inviteForm)));
+  // update DOM depending on invitation status
+  displayMessage(data);
 });
 
 /** 
@@ -39,22 +29,15 @@ inviteForm.addEventListener('submit', e => {
  * @param {Object} data - the data from which the message to be added to the DOM is configured
  */
 const displayMessage = (data) => {
-  // if invitation was successfully sent
   if (data.status) {
-    // set the color of header
     messageHeading.classList.remove('failure');
     messageHeading.classList.add('success');
-    // update the DOM
     addToDom(data);
   } else {
-  // else if invitation was not successfully sent
-    // set the color of header
     messageHeading.classList.remove('success');
     messageHeading.classList.add('failure');
-    // update the DOM
     addToDom(data);
   }
-  // make the click button available
   submitButton.disabled = false;
 };
 
@@ -66,4 +49,23 @@ const addToDom = data => {
   messageHeading.innerHTML = data.message;
   messageBody.innerHTML = data.body;
   messageContainer.classList.remove('hide');
+};
+
+/**
+ * Invites a user to an organisation
+ * @param {Object} invitation - an object containing org,
+ * token and username properties which correspond to the 
+ * organisation to which invitation is done, the token of 
+ * an admin making the invitation and the username of the
+ * invitee.
+ * @return {Object} data indicating whether the invitation
+ * was successful or not.
+ */
+const invite = invitation => {
+  console.log(invitation);
+  return {
+    status: true,
+    message: 'Successfully Invited',
+    body: `Github user ${invitation.username} has been successfully invited to ${invitation.org} organisation.`
+  };
 };
