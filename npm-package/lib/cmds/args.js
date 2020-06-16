@@ -4,6 +4,9 @@ module.exports = (() => {
     if (arg === 'help' || arg === '--help' || arg === '-h') {
       require('./help');
     }
+    if (arg === 'version' || arg === '--version' || arg === '-v') {
+      require('./version');
+    }
   });
   return args;
 })();
