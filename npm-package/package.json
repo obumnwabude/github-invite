@@ -21,5 +21,8 @@
   "homepage": "https://github.com/obumnwabude/github-invite/npm-package/#readme",
   "bin": {
     "github-invite": "bin/invite.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0"
   }
 }
