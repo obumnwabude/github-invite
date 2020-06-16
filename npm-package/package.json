@@ -1,0 +1,30 @@
+{
+  "name": "github-invite",
+  "version": "1.0.0",
+  "description": "A package that takes a GitHub organization's name, an OAuth access token of an admin user in that organization, and a GitHub username. It then sends an invitation to the GitHub user with the provided name, with the help of the provided token, to join the provided GitHub Organisation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obumnwabude/github-invite.git"
+  },
+  "keywords": [
+    "invite",
+    "invitation",
+    "github",
+    "organizations",
+    "orgs"
+  ],
+  "author": "Obumuneme Nwabude <obumnwabude@gmail.com> (https://obumnwabude.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/obumnwabude/github-invite/issues"
+  },
+  "homepage": "https://github.com/obumnwabude/github-invite/npm-package/#readme",
+  "bin": {
+    "github-invite": "./index.js"
+  }
+}
