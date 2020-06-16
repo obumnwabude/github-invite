@@ -4,12 +4,13 @@ const port = process.env.PORT || 3000;
 /* 
  * create a file named 'org.js' and export an object containing the 
  * name(id) of the organisation, to whom the GitHub is user is being invited to and
- * OAuth access token of an admin member in the organisation on behalf of whom the request is sent.
+ * personal access token of an admin member in the organisation on behalf of whom the request is sent.
+ * The token should have the write:org permission under admin:org when then token was created
  *
  * Example: in 'org.js'
  * module.exports = {
  *  name: <NAME OR ID OF ORGANISATION ON GITHUB>,
- *  auth: <OAUTH ACCESS TOKEN OF ADMIN MEMBER>
+ *  auth: <PERSONAL ACCESS TOKEN OF ADMIN MEMBER>
  * };
  * 
  * 'org.js' file is added to .gitignore to ensure that credentials are not committed to Git.
