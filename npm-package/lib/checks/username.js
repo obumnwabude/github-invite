@@ -15,7 +15,7 @@ module.exports = (username) => {
         process.exit(1);
       } else {
         spinner.stop();
-        return user.id;
+        return user;
       }
     }).catch((error) => {
       spinner.stop();
