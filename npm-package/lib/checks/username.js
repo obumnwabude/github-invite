@@ -3,19 +3,19 @@ const Spinner = require('clui').Spinner;
 const fetch = require('node-fetch');
 const errorHandler = require('../utils/error');
 
-module.exports = (org) => {
-  const spinner = new Spinner(`Looking up ${chalk.greenBright(org)} GitHub organization`);
+module.exports = (username) => {
+  const spinner = new Spinner(`Looking up ${chalk.greenBright(username)} GitHub user`);
   spinner.start();
-  return fetch(`https://api.github.com/orgs/${org}`)
+  return fetch(`https://api.github.com/users/${username}`)
     .then((response) => response.json())
-    .then((organization) => {
-      if (!organization.id) {
+    .then((user) => {
+      if (!user.id) {
         spinner.stop();
-        console.error(`GitHub organization ${chalk.yellowBright.bold(org)} not found. Please check and try again.`);
+        console.error(`GitHub user ${chalk.yellowBright.bold(username)} not found. Please check and try again.`);
         process.exit(1);
       } else {
         spinner.stop();
-        return organization.login;
+        return user.id;
       }
     }).catch((error) => {
       spinner.stop();
