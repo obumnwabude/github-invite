@@ -1,3 +1,3 @@
 # GitHub Organisation Invitation - NPM package
 
-A package that takes a GitHub organization's name, an personal access token of an admin user in that organization, and a GitHub username. It then sends an invitation to the GitHub user with the provided name, with the help of the provided token, to join the provided GitHub Organisation. The token must at least have the write:org permission under admin:org permissions when the token was created.
+A package that takes a GitHub organization's name, a personal access token of an admin user in that organization, and a GitHub username. It then sends an invitation to the GitHub user with the provided name, with the help of the provided token, to join the provided GitHub Organisation. The token must at least have the write:org permission under admin:org permissions when the token was created.
