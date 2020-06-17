@@ -1,5 +1,6 @@
-module.exports = (() => {
-  const args =  process.argv.splice(2);
+const args = process.argv.splice(2);
+
+const checkHelpAndVersion = () => {
   args.forEach((arg) => {
     if (arg === 'help' || arg === '--help' || arg === '-h') {
       require('./help');
@@ -8,5 +9,13 @@ module.exports = (() => {
       require('./version');
     }
   });
-  return args;
+};
+
+module.exports = (() => {
+  if (args.length === 3) {
+    return args;
+  } else {
+    checkHelpAndVersion();
+    require('./help');
+  }
 })();
