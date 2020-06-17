@@ -14,7 +14,9 @@ const checkHelpAndVersion = () => {
 };
 
 module.exports = () => {
-  if (args.length === 3) {
+  if (args.length === 0) {
+    return args;
+  } else if (args.length === 3) {
     return args;
   } else {
     checkHelpAndVersion();
