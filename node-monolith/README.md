@@ -2,6 +2,8 @@
 
 A web app that can accept a GitHub username and send them an invitation to join a GitHub Organisation.
 
+You can host or serve it and provide users with the frontend, in which they can enter their GitHub username and get invited to your GitHub organization.
+
 ## Add org.js file
 
 Add an org.js file in the root of this repository for this app to work. The file should export the name of the GitHub organisation to be joined and a personal access token of an admin in that GitHub organization.
@@ -22,6 +24,14 @@ module.exports = {
 
 `org.js` has been added to .gitignore so that credentials are not committed to Git.
 
+#### Note on .gitignore
+If you host this node app with cloud providers that leverage git, then you will have to remove `org.js` from `.gitignore`, so that the `git push` can push the file equally, else the app will not work.
+
 ## The FrontEnd
 
 In the home of your app, a GitHub user can enter their `username` and get invited to your organization. They will receive proper feedback, whether they was successfully invited or not and possible reasons for that.
+
+
+## Demo
+
+![Demo of Node Monolith Version of GitHub Organization Invitation](../demos/node-monolith.gif)

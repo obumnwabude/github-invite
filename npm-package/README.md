@@ -4,13 +4,15 @@ A package that takes a GitHub organization's name, a personal access token of an
 
 ## Usage:
 
-#### \* Install the package
+* #### Install the package
+
+In the command line, run
 
 ```
 npm i -g github-invite
 ```
 
-#### \* Make an invitation
+* #### Make an invitation
 
 ```
 github-invite
@@ -23,3 +25,8 @@ You can still enter all three details at once.
 ```
 github-invite <org> <username> <token>
 ```
+
+
+## Demo 
+
+![Demo of NPM Package Version of GitHub Organization Invitation](../demos/npm-package.gif)
