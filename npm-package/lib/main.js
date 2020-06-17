@@ -1,5 +1,6 @@
 const orgCheck = require('./checks/org');
 const userCheck = require('./checks/username');
+const tokenCheck = require('./checks/token');
 const invite = require('./invite');
 
 module.exports = () => {
@@ -8,7 +9,7 @@ module.exports = () => {
     .then((org) => {
       userCheck(args[1])
         .then((user) => {
-          invite(org, user, args[2])
+          invite(org, user, tokenCheck(args[2]))
             .then(() => {
               process.exit(0);
             });
