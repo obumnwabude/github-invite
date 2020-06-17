@@ -3,9 +3,12 @@ const app = express();
 const port = process.env.PORT || 3000;
 /*
  * create a file named 'org.js' and export an object containing the
- * name(id) of the organisation, to whom the GitHub is user is being invited to and
- * personal access token of an admin member in the organisation on behalf of whom the request is sent.
- * The token should have the write:org permission under admin:org when then token was created
+ * name(id) of the organisation, to whom the GitHub is user is being
+ * invited to and personal access token of an admin member in the
+ * organisation on behalf of whom the request is sent.
+ * The token should have at least the admin:org (full control of orgs
+ * and teams, read and write org projects) permission when then token
+ * was created.
  *
  * Example: in 'org.js'
  * module.exports = {
@@ -13,7 +16,8 @@ const port = process.env.PORT || 3000;
  *  auth: <PERSONAL ACCESS TOKEN OF ADMIN MEMBER>
  * };
  *
- * 'org.js' file is added to .gitignore to ensure that credentials are not committed to Git.
+ * 'org.js' file is added to .gitignore to ensure that credentials
+ * are not committed to Git.
  */
 const org = require('./org');
 const fetch = require('node-fetch');
