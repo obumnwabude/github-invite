@@ -12,6 +12,7 @@ The way this app requires the above mentioned three items, depends on your choic
 
 
 1. ## [Node Monolith Server](/node-monolith)
+
 In this version, provide an `org.js` file in the root folder that exports a JSON object containing `name` (organization's name) and `token` properties. Host the node server. In its frontend, a GitHub user can enter their `username` and get invited to your organization. They will receive proper feedback, whether they was successfully invited or not and possible reasons for that.
 
 #### Demo
@@ -20,6 +21,7 @@ In this version, provide an `org.js` file in the root folder that exports a JSON
 
 
 2. ## [Static Web App](/static-frontend)
+
 In this version, you enter your organization's name on GitHub, an admin's personal access token and the username of the GitHub user to be invited, directly in the static frontend of the website and JavaScript will do the invitation. Proper feedback is equally shown directly in the website whether the invitation was successful or not and possible reasons for that.
 
 #### Demo
@@ -28,6 +30,9 @@ In this version, you enter your organization's name on GitHub, an admin's person
 
 
 3. ## [NPM Package](/npm-package)
+
+[![npm version](https://badge.fury.io/js/github-invite.svg)](https://badge.fury.io/js/github-invite)
+
 In this version, you install `github-invite` CLI with through [npm/NodeJS](https://nodejs.org), and then you use the CLI to send invitations directly from the command line. You can then choose to either enter `github-invite`, and then the CLI will interactively demand the `org`, `username` and `token`, that is:
 
 ```

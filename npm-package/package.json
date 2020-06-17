@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/obumnwabude/github-invite/issues"
   },
-  "homepage": "https://github.com/obumnwabude/github-invite/npm-package/#readme",
+  "homepage": "https://github.com/obumnwabude/github-invite/tree/master/npm-package#github-organisation-invitation---npm-package",
   "bin": {
     "github-invite": "bin/invite.js"
   },
