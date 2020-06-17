@@ -2,7 +2,7 @@ const chalk = require('chalk');
 
 const blue = (text) => chalk.blueBright.bold(text);
 
-module.exports = (() => {
+module.exports = () => {
   const help = `Invites a GitHub user with the provided username to the provided GitHub organization. The personal access token of an admin in that GitHub organization is required and it is with it that the invitation is done.
 
 Usage: github-invite <org> <username> <token>
@@ -24,4 +24,4 @@ Options:
 
   console.log(help);
   process.exit(0);
-})();
+};
