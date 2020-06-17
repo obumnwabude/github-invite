@@ -45,7 +45,7 @@ The `github-invite` CLI also outputs feedback properly as invitations are done, 
 
 #### Demo 
 
-![Demo of NPM Package Version of GitHub Organization Invitation](../demos/npm-package.gif)
+![Demo of NPM Package Version of GitHub Organization Invitation](/demos/npm-package.gif)
 
 
 

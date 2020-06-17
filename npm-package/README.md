@@ -18,7 +18,7 @@ npm i -g github-invite
 github-invite
 ```
 
-The CLI will demand for the `org`, `username` and admin's `token`
+The CLI will interactively demand for the `org`, `username` and admin's `token`
 
 You can still enter all three details at once.
 
