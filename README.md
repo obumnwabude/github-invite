@@ -47,15 +47,9 @@ The `github-invite` CLI also outputs feedback properly as invitations are done, 
 
 ![Demo of NPM Package Version of GitHub Organization Invitation](/demos/npm-package.gif)
 
-
-
-
-
-
-
-
-
-
+<br/>
+<br/>
+<br/>
 
 ## Bugs? Features?
 If you have find any problems while using this software, or you come accross any bugs, or you want to add a feature, please feel free to create an issue or pull request. 
