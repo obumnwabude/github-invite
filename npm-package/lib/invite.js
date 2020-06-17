@@ -3,7 +3,7 @@ const Spinner = require('clui').Spinner;
 const fetch = require('node-fetch');
 const errorHandler = require('./utils/error');
 
-module.exports = (org, user, token) => {
+module.exports = ({org, user, token}) => {
   const spinner = new Spinner(`Inviting GitHub user ${chalk.greenBright(user.login)} to ${chalk.greenBright(org)} GitHub organization`);
   spinner.start();
   return fetch(`https://api.github.com/orgs/${org}/invitations`, {
