@@ -59,16 +59,16 @@ label span {
   font-size: 1rem;
 }
 
-label input[type="text"]:placeholder-shown + span {
+label input.blue:placeholder-shown + span {
   display: none;
 }
 
-label input[type="text"]:not(:placeholder-shown):focus + span {
+label input.blue:not(:placeholder-shown):focus + span {
   display: block;
   color: #0000FF;
 }
 
-input[type="text"] {
+input.blue {
   border: none;
   border-bottom: 1.5px solid grey;
   margin-top: 5px;
@@ -87,7 +87,7 @@ input[name="username"] {
   margin-bottom: 0px;
 }
 
-input[type="text"]:focus {
+input.blue:focus {
   border: none;
   border-bottom: 3px solid #0000FF;
   outline: none;
@@ -162,7 +162,7 @@ button[type="submit"]:disabled {
     justify-content: space-between;
   }
 
-  input[type="text"] {
+  input.blue {
     min-width: 300px;
   }
 }
