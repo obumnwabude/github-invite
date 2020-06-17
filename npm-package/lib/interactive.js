@@ -7,7 +7,11 @@ module.exports = (stage) => {
   try {
     return inquirer.prompt(questions[stage]);
   } catch (error) {
-    console.error(chalk.redBright('An error should not occur here. Please try again and if it persists please report it as an issue at https://github.com/obumnwabude/github-invite/issues \nThank you!'));
+    console.error(
+      chalk.redBright(
+        'An error should not occur here. Please try again and if it persists please report it as an issue at https://github.com/obumnwabude/github-invite/issues \nThank you!'
+      )
+    );
     handleError(error);
-  };
+  }
 };

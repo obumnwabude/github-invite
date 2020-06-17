@@ -12,18 +12,28 @@ Usage: github-invite
 
 Use without arguments or with incomplete arguments for an interactive invitation. Using without arguments is preferrable because token input is hidden.
 
-  ${cyan('org')}          The name of an organization in GitHub into which a user
+  ${cyan(
+    'org'
+  )}          The name of an organization in GitHub into which a user
                is to be invited.
-  ${cyan('username')}     The username of the GitHub user to be invited to the provided
+  ${cyan(
+    'username'
+  )}     The username of the GitHub user to be invited to the provided
                organization.
-  ${cyan('token')}        A personal access token of an admin member in the organization.
+  ${cyan(
+    'token'
+  )}        A personal access token of an admin member in the organization.
                The token must at least have the write:org permission under
                admin:org permissions when the token was created in GitHub 
                account settings of the admin.
 
 Options:
-  ${cyan('help')}, ${cyan('--help')}, or ${cyan('-h')}:          Displays this help information.
-  ${cyan('version')}, ${cyan('--version')}, or ${cyan('-v')}:    Displays the current version of github-invite.
+  ${cyan('help')}, ${cyan('--help')}, or ${cyan(
+    '-h'
+  )}:          Displays this help information.
+  ${cyan('version')}, ${cyan('--version')}, or ${cyan(
+    '-v'
+  )}:    Displays the current version of github-invite.
   `;
 
   console.log(help);

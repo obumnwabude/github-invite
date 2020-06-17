@@ -2,6 +2,9 @@
   "name": "github-invite",
   "version": "1.0.0",
   "description": "A package that takes a GitHub organization's name, a personal access token of an admin user in that organization, and a GitHub username. It then sends an invitation to the GitHub user with the provided name, with the help of the provided token, to join the provided GitHub Organisation. The token must at least have the write:org permission under admin:org permissions when the token was created.",
+  "scripts": {
+    "lint": "prettier --single-quote --write ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/obumnwabude/github-invite.git"
@@ -27,5 +30,8 @@
     "clui": "^0.3.6",
     "inquirer": "^7.2.0",
     "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
   }
 }

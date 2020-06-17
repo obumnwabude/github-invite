@@ -4,20 +4,27 @@ const fetch = require('node-fetch');
 const errorHandler = require('../utils/error');
 
 module.exports = (username) => {
-  const spinner = new Spinner(`Looking up ${chalk.greenBright(username)} GitHub user`);
+  const spinner = new Spinner(
+    `Looking up ${chalk.greenBright(username)} GitHub user`
+  );
   spinner.start();
   return fetch(`https://api.github.com/users/${username}`)
     .then((response) => response.json())
     .then((user) => {
       if (!user.id) {
         spinner.stop();
-        console.error(`GitHub user ${chalk.yellowBright.bold(username)} not found. Please check and try again.`);
+        console.error(
+          `GitHub user ${chalk.yellowBright.bold(
+            username
+          )} not found. Please check and try again.`
+        );
         process.exit(1);
       } else {
         spinner.stop();
         return user;
       }
-    }).catch((error) => {
+    })
+    .catch((error) => {
       spinner.stop();
       errorHandler(error);
     });
