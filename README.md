@@ -24,6 +24,9 @@ In this version, provide an `org.js` file in the root folder that exports a JSON
 
 In this version, you enter your organization's name on GitHub, an admin's personal access token and the username of the GitHub user to be invited, directly in the static frontend of the website and JavaScript will do the invitation. Proper feedback is equally shown directly in the website whether the invitation was successful or not and possible reasons for that.
 
+It is hosted with [GitHub pages](https://pages.github.com) at https://obumnwabude.github.io/github-invite/
+So, you can click on that link and perform as many invitations as you wish.
+
 #### Demo
 
 ![Demo of Static Frontend Version of GitHub Organization Invitation](/demos/static-frontend.gif)
