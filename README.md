@@ -20,7 +20,7 @@ In this version, provide an `org.js` file in the root folder that exports a JSON
 ![Demo of Node Monolith Version of GitHub Organization Invitation](/demos/node-monolith.gif)
 
 
-2. ## [Static Web App](/static-frontend)
+2. ## [Static Web App](/docs)
 
 In this version, you enter your organization's name on GitHub, an admin's personal access token and the username of the GitHub user to be invited, directly in the static frontend of the website and JavaScript will do the invitation. Proper feedback is equally shown directly in the website whether the invitation was successful or not and possible reasons for that.
 
