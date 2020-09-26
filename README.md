@@ -67,6 +67,9 @@ The `github-invite` CLI also outputs feedback properly as invitations are done, 
 <br/>
 <br/>
 
+## Customizing
+Feel free to customize the frontends of the ![Node Monolith](/node-monolith) and ![Firebase](/firebase) versions to suit your brand's guidelines. However, avoid tampering with the parts of the code that give feedback and make the app work.
+
 ## Bugs? Features?
 If you have find any problems while using this software, or you come accross any bugs, or you want to add a feature, please feel free to create an issue or pull request. 
 Thank you!

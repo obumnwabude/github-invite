@@ -26,3 +26,10 @@ Only admin members of a GitHub organisation can send an invitation to other GitH
 * Enable billing for your firebase project, in the firebase console, inorder to use cloud functions at https://console.firebase.google.com/project/_/usage/details. In other words, switch from the free (spark) plan to the pay as you go (blaze) plan. Checkout the cloud functions pricing at https://firebase.google.com/pricing#cloud-functions
 
 * Run `firebase deploy`, your Github-Invite is at your `<project_id>`.web.app 
+
+## Customizing
+Feel free to customize the frontend to suit your brand's guidelines. However, avoid tampering with the parts of the code that give feedback and make the app work.
+
+## Demo
+
+![Demo of Firebase Version of GitHub Organization Invitation](../demos/node-monolith.gif)

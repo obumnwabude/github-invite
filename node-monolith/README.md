@@ -32,6 +32,9 @@ If you host this node app with cloud providers that leverage git, then you will 
 
 In the home of your app, a GitHub user can enter their `username` and get invited to your organization. They will receive proper feedback, whether they was successfully invited or not and possible reasons for that.
 
+## Customizing
+Feel free to customize the frontend to suit your brand's guidelines. However, avoid tampering with the parts of the code that give feedback and make the app work.
+
 ## Demo
 
 ![Demo of Node Monolith Version of GitHub Organization Invitation](../demos/node-monolith.gif)
