@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #f9fcff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#noscript-heading {
+  font-size: 1.2rem;
+}
+
+main {
+  margin: 50px auto;
+  width: 80%;
+  padding: 15px;
+  max-width: 450px;
+  border: 2px solid #f9fcff;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 0 10px 3px #3f51b5;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-style: double;
+  font-size: 2rem;
+}
+
+.org-name {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+p#intro {
+  margin: 20px auto;
+}
+
+form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+label {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+label input[type='text']:placeholder-shown + span {
+  display: none;
+}
+
+label input[type='text']:not(:placeholder-shown):focus + span {
+  display: block;
+  color: #0000ff;
+}
+
+input[type='text'] {
+  border: none;
+  border-bottom: 1.5px solid grey;
+  margin-top: 5px;
+  display: block;
+  min-width: 240px;
+  font-size: 1.2rem;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+input[type='text']:focus {
+  border: none;
+  border-bottom: 3px solid #0000ff;
+  outline: none;
+}
+
+#button-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+button[type='submit'] {
+  min-width: 75px;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background-color: #0000ff;
+  box-shadow: 0.5px 0.5px 3px 1px #3f51b5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 20px;
+}
+
+button[type='submit']:disabled {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#message-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hide {
+  display: none;
+}
+
+#message-heading {
+  margin: 0 auto 15px auto;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.success {
+  background-color: rgb(156, 226, 182);
+  color: rgb(18, 109, 52);
+}
+
+.failure {
+  background-color: rgb(252, 148, 148);
+  color: rgb(142, 40, 40);
+}
+
+@media (min-width: 992px) {
+  main {
+    max-width: 900px;
+    border-radius: 25px;
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .show-at-large {
+    display: inline;
+  }
+
+  input[type='text'] {
+    min-width: 300px;
+  }
+}
