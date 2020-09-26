@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Get Invited to the GitHub Organisation</title>
+  </head>
+  <body>
+    <noscript>
+      <h2 id="noscript-heading" class="failure">
+        This website requires JavaScript to successfully invite you to the
+        GitHub Organisation. To get invited, enable JavaScript in your browser
+        settings or upgrade or change your browser.
+      </h2>
+    </noscript>
+    <main>
+      <h1 class="text-center">GitHub Organisation Invitation</h1>
+      <p class="text-center" id="intro">
+        Enter your GitHub Username below to get invited to
+        <span class="org">the</span> GitHub Organisation
+      </p>
+      <form method="POST" id="invite">
+        <label>
+          <input
+            type="text"
+            name="username"
+            minlength="2"
+            placeholder="Username"
+            required
+          />
+          <span>Username</span>
+        </label>
+        <div id="button-container">
+          <button type="submit">Get Invited</button>
+        </div>
+      </form>
+      <div id="message-container" class="hide">
+        <h3 class="text-center" id="message-heading"></h3>
+        <p id="message-body"></p>
+      </div>
+    </main>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

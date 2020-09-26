@@ -31,7 +31,7 @@ inviteForm.addEventListener('submit', (e) => {
   // make the click button unavailable
   submitButton.disabled = true;
   // send username and handle accordingly
-  fetch('/', {
+  fetch('/invite', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -41,12 +41,12 @@ inviteForm.addEventListener('submit', (e) => {
   })
     .then((response) => response.json())
     .then((data) => displayMessage(data))
-    .catch((error) =>
+    .catch((error) => {
       displayMessage({
         status: false,
         message: 'An Error Occured',
         body: error,
-      })
+      })}
     );
 });
 
